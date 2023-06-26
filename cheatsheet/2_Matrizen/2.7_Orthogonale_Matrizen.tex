@@ -1,0 +1,44 @@
+\subsection{2.7 Orthogonale Matrizen}{
+
+
+Eine quadratische Matrix ist orthogonal, wenn sie aus \textbf{zueinander orthogonalen Spaltenvektoren der Länge 1} besteht. Dies ist der Fall, wenn eine Matrix mit der Transponierten multipliziert die Identität ergibt.
+
+%\vspace{-5pt}
+
+\begin{center}
+\fbox{$Q^T \cdot Q = I$}
+\end{center}
+
+Multipliziert man einen Vektor mit einer orthogonalen Matrix, kann sich seine Orientierung ändern, jedoch nicht seine Länge. Abbildungen sind deshalb kongruent.
+
+\vskip5pt
+
+\textbf{Eigenschaften:}
+
+\vspace{-3pt}
+
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item $Q$ orthogonal $\Leftrightarrow$ Spalten/Zeilen von $Q$ sind zueinander orthogonale Vektoren der Länge 1.
+\item Nur quadratische Matrizen können orthogonal sein.
+\item $A$ und $B$ orthogonal $\Rightarrow$ $A \cdot B$ orthogonal
+\item $Q$ orthogonal $\Leftrightarrow$ $Q^{-1}$ orthogonal
+\item $\|Qx\|_2 = \|x\|_2$, $|det(Q)| = 1$, $|eig(Q)| = 1$
+\item $Q^{-1} = Q^T$
+\end{itemize}
+\vspace{-5pt}
+
+%\textbf{Drehungs- und Spiegelungsmatrizen:}
+%
+%\vskip1pt
+%
+%Drehung um Ursprung im $\mathbb{R}^2$: \par \vspace{-1mm} \begin{center}$R(\alpha) = \begin{pmatrix} cos(\alpha) & - sin(\alpha) \\ sin(\alpha) & cos(\alpha) \end{pmatrix}$\end{center} \par
+%Drehung um x-Achse im $\mathbb{R}^3$: \par \vspace{-1mm} \begin{center}
+%$R_x(\alpha) = \begin{pmatrix} 1 & 0 & 0 \\ 0 & cos(\alpha) & -sin(\alpha) \\ 0 & sin(\alpha) & cos(\alpha)  \end{pmatrix}$ \end{center}
+%Drehung um y-Achse im $\mathbb{R}^3$: \par \vspace{-1mm} \begin{center}
+%$R_y(\alpha) = \begin{pmatrix} cos(\alpha) & 0 & sin(\alpha) \\ 0 & 1 & 0 \\ -sin(\alpha) & 0 & cos(\alpha)  \end{pmatrix}$ \end{center}
+%Drehung um z-Achse im $\mathbb{R}^3$: \par \vspace{-1mm} \begin{center}
+%$R_z(\alpha) = \begin{pmatrix} cos(\alpha) & -sin(\alpha) & 0 \\ sin(\alpha) & cos(\alpha) & 0 \\ 0 & 0 & 1  \end{pmatrix}$ \end{center}
+%
+%
+}
+\WhiteSpace

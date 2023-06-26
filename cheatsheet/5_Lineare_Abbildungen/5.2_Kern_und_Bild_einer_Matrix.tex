@@ -1,0 +1,44 @@
+\subsection{5.2 Kern und Bild einer Matrix}{
+\vskip1pt
+\textbf{Kern:}
+Der Kern einer Matrix ist die Menge aller Vektoren, die durch Multiplikation auf den Nullvektor abgebildet werden.
+\vskip3pt
+\begin{center}
+$Kern(A) = \{x \in \mathbb{R}^n | A\cdot x = 0 \}$
+\end{center}
+
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item \textbf{Kern bestimmen:} Gleichungssystem $Ax = 0$ lösen. \par Wenn Rang nicht voll ist, gibt es unendlich viele Lösungen. Der Lösungsraum (am besten dargestellt als Linearkombination von mit Parameter multiplizierten Vektoren) ist der Kern der Matrix.
+\end{itemize}
+
+\vskip2pt
+
+\textbf{Bild:}
+Das Bild einer Matrix A ist die Menge aller Bildvektoren, also aller möglichen \glqq Ergebnisse\grqq einer Multiplikation von A mit einem beliebigen Vektor.
+
+\vskip3pt
+\begin{center}
+$Bild(A) = \{y \in \mathbb{R}^m | \hskip2pt \exists x \in \mathbb{R}^n$ sodass $y = A\cdot x \}$
+\end{center}
+\vspace{-5pt}
+
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item \textbf{Bild bestimmen:} $Bild = span\{a^{(1)}, a^{(2)} \hdots a^{(n)}\}$ \par
+Ist nach einem Erzeugendensystem gefragt, reicht es, einfach die Spaltenvektoren hinzuschreiben. \par
+\textbf{Achtung:} Die Spaltenvektoren sind immer ein Erzeugendensystem des Bildes, jedoch nicht unbedingt eine Basis! Um Basis zu erstellen: Siehe 4.5
+\end{itemize}
+
+\vspace{0pt}
+
+\textbf{Zusammenhänge}
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item $dim(Bild(A)) = Rang(A)$
+\item für $A^{m \times n}$: $dim(Bild(A)) + dim(Kern(A)) = n$
+\item $Bild(A) \perp Kern(A^T)$
+\item $Bild(A^N) \subseteq Bild(A)$ und es gibt $A$ derart, dass $Bild(A^N) \neq Bild(A)$ mit ($A \in \mathbb{R}^{n \times n}$)
+\item Fredholm Alternative: $Ax = b$ ist lösbar (b liegt im Bild) genau dann, wenn $b$ senkrecht auf allen
+Lösungen des adjungierten LGS $A^T \cdot y = 0$ steht.
+\end{itemize}
+
+}
+\WhiteSpace

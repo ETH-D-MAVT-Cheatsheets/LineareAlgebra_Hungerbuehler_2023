@@ -1,0 +1,41 @@
+\subsection{10.5 Traegheitssatz von Sylvester}{
+\vskip1pt
+
+\textbf{Signatur} \vskip1pt
+Die Signatur einer Matrix $A$ ist definiert als:
+
+\vspace{-2pt}
+\begin{center}
+\fbox{$sig(A) = (p,n,z)$}
+\end{center}
+\par
+\vspace{-2pt}
+
+Wobei
+\vspace{-4pt}
+\begin{itemize}[leftmargin=0.29cm, itemsep=0pt]
+\item $A \in \mathbb{R}^{m \times m}$ symmetrisch ist.
+\item $p$ die Anzahl positiver EW von $A$.
+\item $n$ die Anzahl negativer EW von $A$ (je mit algVh gezählt).
+\item $z = m-p-n$ die algVh des EW 0 ist.
+\end{itemize}
+\vskip2pt
+
+\textbf{Traegheitssatz von Sylvester}\vskip2pt
+Ist $A \in \mathbb{R}^{m \times m}$ symmetrisch und $W \in \mathbb{R}^{m \times m}$ regulär so haben $A$ und $W^TAW$ die selbe Signatur. Des Weiteren existiert eine Matrix $W$ so dass
+
+\vspace{-2pt}
+\begin{center}
+$W^TAW = diag(\tikzmark[xshift=0,yshift=-6pt]{p_1} 1,...,1 \tikzmark[xshift=0,yshift=-6pt]{p_2}, \tikzmark[xshift=0,yshift=-6pt]{n_1} -1,...,-1 \tikzmark[xshift=0,yshift=-6pt]{n_2}, \tikzmark[xshift=0,yshift=-6pt]{z_1} 0,...,0 \tikzmark[xshift=0,yshift=-6pt]{z_2})$
+\end{center}
+\par\vskip4pt
+
+\drawbrace[brace mirrored, thick, black]{p_1}{p_2}
+\drawbrace[brace mirrored, thick, black]{n_1}{n_2}
+\drawbrace[brace mirrored, thick, black]{z_1}{z_2}
+\annote[below=3pt, black]{brace-7}{\small $p$}
+\annote[below=3pt, black]{brace-8}{\small $n$}
+\annote[below=3pt, black]{brace-9}{\small $z$}
+
+}
+\WhiteSpace

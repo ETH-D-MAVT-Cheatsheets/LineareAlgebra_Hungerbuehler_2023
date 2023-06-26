@@ -1,0 +1,32 @@
+\subsection{11.1 Kleinste Quadrate}{
+\vskip1pt
+
+Mit dem Prinzip der \glqq kleinsten Quadrate\grqq \hskip1pt kann man zwar überbestimmte Gleichungssysteme nicht lösen, man kann jedoch eine möglichst \glqq gute\grqq \hskip1pt Lösung finden, indem man den quadratischen Fehler minimiert. \vskip5pt
+
+\begin{minipage}{\columnwidth}
+Bsp:\par
+$\begin{matrix} 2x_1 & + & 3x_2 & = & 6 \\ 3x_1 & + & 4x_2 & = & 8 \\ 2x_1 & + & 1x_2 & = & 3 \end{matrix} \hskip7pt \Rightarrow$ \hskip4pt überbestimmt \vskip5pt
+Wir bilden die Differenz (= Fehler) aus der rechten und der linken Seite und nennen sie Residuenvektor $r$: \vskip5pt
+$\begin{matrix} 2x_1 & + & 3x_2 & - & 6 & = & r_1 \\ 3x_1 & + & 4x_2 & - & 8 & = & r_2 \\ 2x_1 & + & 1x_2 & - & 3 & = & r_3 \end{matrix}$ \vskip5pt
+Wir suchen $(x_1 \hskip2pt x_2)^T$, sodass $\|r \|_2 = \|Ax-c\|_2$ minimal wird.\par%
+$\Rightarrow$ quadratischer Fehler minimal
+\end{minipage}
+
+\vskip6pt
+
+\textbf{Vorgehen:} \vskip1pt
+Dazu lösen wir das Gleichungssystem $A^TAx = A^Tc$ welches in den meisten Aufgabe bereits in der Form $Ax - c = r$ gegeben ist (siehe oben).
+
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Man bestimme $A$ und $c$\vskip2pt
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt$A = \begin{pmatrix}2 & 3 \\ 3 & 4 \\ 2 & 1 \end{pmatrix}, \hskip5pt c = \begin{pmatrix} 6 \\ 8 \\ 3 \end{pmatrix}$} \par
+
+\item Man berechne $A^TA$ und $A^Tc$
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt$A^TA = \begin{pmatrix}17 & 20 \\ 20 & 2 \end{pmatrix}, \hskip5pt A^Tc = \begin{pmatrix} 42 \\ 53 \end{pmatrix}$} \par
+
+\item Man löse das Gleichungssystem $A^TAx = A^Tc$
+\vskip2pt Bsp: \scalebox{0.8}{$\begin{pmatrix}17 & 20 \\ 20 & 2 \end{pmatrix}\cdot \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} = \begin{pmatrix} 42 \\ 53 \end{pmatrix} \hskip3pt \Rightarrow \hskip3pt x = \begin{pmatrix} 2.67 \\ -0.17 \end{pmatrix}$} \par
+\end{enumerate}
+
+}
+\WhiteSpace

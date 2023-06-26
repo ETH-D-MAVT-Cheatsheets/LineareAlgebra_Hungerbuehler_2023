@@ -1,0 +1,73 @@
+\subsection{10.7 Hauptachsentransformation einer quadr. Form}{
+\vskip1pt
+Wir können durch zwei Koordinatentransformationen (Drehung $y =  T x$ und Verschiebung $z = y + c$) jede quadratische Form rein quadratisch machen. \par 
+\vskip2pt
+Während der Koordinatenvektor $x$ die quadratische Form in der Standardbasis darstellt, stellt der Koordinatenvektor $z$ die quadratische Form in der neuen Basis dar. \par
+\vskip2pt
+Die Basis, in der $q(x)$ rein quadratisch wird, ist die Eigenbasis der zugehörigen symmetrischen Matrix A.
+
+\vspace{0pt}
+\begin{center}Bsp: $q(x) = x_1^2 + x_2^2 - 3 x_3^2 - 6 x_1x_2$ \end{center}
+\vspace{0pt}
+
+\textbf{Vorgehen:} \vskip1pt
+Je nach Aufgabe müssen nicht alle Punkte durchgeführt werden. Für ausschliesslich Hauptachsentransformation reicht 1-3.
+\vskip3pt
+
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Man bestimme die symmetrische Matrix $A \in \mathbb{R}^{n\times n}$, sodass $q(x) = x^T A x$\vskip2sp
+Trick: \hskip3pt \scalebox{0.8}{$ax_1^2 + b x_1x_2 + c x_2^2 \hskip3pt \Rightarrow \hskip3pt A =  \begin{pmatrix}a & b/2 \\ b/2 & c \end{pmatrix}$}s
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt$A = \begin{pmatrix}1 & -3 & 0 \\ -3 & 1 & 0 \\ 0 & 0 & -3 \end{pmatrix}$} \par
+
+\item Man diagonalisiere die Matrix A (siehe 6.6) und bestimme die Transformationsmatrix $T$. Da A symmetrisch ist, kann $T$ orthogonal gewählt werden und $T^{-1} = T^T$. \par \textbf{T orthogonal wählen! Spalten von T normieren, falls zwei Eigenvektoren zum gleichen Eigenwert: 8.4}
+\vskip2pt Bsp: \scalebox{0.8}{$D = \begin{pmatrix}-3 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 4 \end{pmatrix}, \hskip2pt T = \begin{pmatrix}0 & 1/\sqrt{2} & -1/\sqrt{2} \\ 0 & 1\sqrt{2} & 1\sqrt{2} \\ 1 & 0 & 0 \end{pmatrix}$}
+
+\item Multipliziere aus: $q(y) = y^T \cdot D \cdot y$. Wir haben nun unsere Hauptachsentransformation durchgeführt.
+\vskip2pt Bsp: \scalebox{0.8}{$y^T D y  = -3y_1^2 - 2y_2^2 + 4y_3^2$}
+
+\item Falls in Aufgabe gefragt: Bringe Quadrik $q(x) + a^T x + b = 1$ in Normalform. \par
+Bestimme  $a \in \mathbb{R}^n$ und $b \in \mathbb{R}$. \par
+\vskip2pt Bsp: $q(x) + 2x_3 - \frac{1}{3} = 1 \Rightarrow \hskip2pt a = \begin{pmatrix} 0 \\ 0 \\ 2 \end{pmatrix}, \hskip2pt b = -\frac{1}{3}$
+
+\item Schreibe Quadrik in transformierter Form (ausmultiplizieren):  $y^T D y + a^T T y + b = 1$
+\vskip2pt Bsp: \scalebox{0.8}{$y^T D y + a^T T y + b = -3y_1^2 - 2y_2^2 + 4y_3^2 + 2y_1 - \frac{1}{3} = 1$}
+
+\item Falls noch lineare Terme übrig: Ergänze quadratisch
+\vskip2pt Bsp: \scalebox{0.8}{$0 = -3 y_1^2 - 2 y_2^2 + 4 y_3^2 + 2y_1 - \frac{4}{3}$} \par
+\scalebox{0.8}{\hskip26pt $= -3 (y_1^2-\frac{2}{3} y_1) - 2y_2^2 + 4y_3^2-\frac{4}{3}$} \par
+\scalebox{0.8}{\hskip26pt $= -3 ((y_1-\frac{2}{2 \cdot 3})^2 - (\frac{2}{2 \cdot 3})^2) - 2y_2^2 + 4y_3^2-\frac{4}{3}$}
+\scalebox{0.8}{\hskip26pt $= -3 (y_1-\frac{2}{2 \cdot 3})^2 - 2y_2^2 + 4y_3^2-\frac{4}{3} + 3\cdot (\frac{1}{3})^2$}
+\scalebox{0.8}{\hskip26pt $= -3 (y_1-\frac{1}{3})^2 - 2y_2^2 + 4y_3^2-1$}
+
+\vskip3pt
+
+Durchführung der zweiten Koordinatentransformation $z = y + c$ (Verschiebung). Man bestimme Vektor $c$.  \par Danach enthält die Gleichung nur noch rein quadratische Terme.
+\vskip2pt Bsp: \scalebox{0.8}{$c = \begin{pmatrix} -1/3 \\ 0 \\ 0 \end{pmatrix} \Longrightarrow Q(z) = -3 z_1^2 - 2z_2^2 + 4 z_3^2$}
+
+\item Falls gefragt: Gib die zusammengesetzte Koordinatentransformation an: $z = T^T x + c$
+
+
+\end{enumerate}
+
+\vskip5pt
+\textbf{Welche Hauptachse schneidet $q(x) = a > 0$ nicht?} \par
+Die mit dem negativen Eigenwert. Jeder Vektor auf dieser Achse gibt in $q(x)$ eingesetzt eine negative Zahl.\par
+$q(v) = v^TAv = v^T(-\lambda v) = -\lambda v^Tv = -\lambda \|v\|^2 \leq 0$
+\vskip3pt
+
+\textbf{Wie skizziere ich die Quadrik in Normalform?} \par
+In Normalform ist es nicht schwer, mehrere Punkte einzusetzen und dann Linien durchzuziehen.\vskip3pt 
+
+\textbf{Wie skizziere ich die Quadrik im ursprünglichen System?} \par
+Skizziere zuerst in Normalform und transformiere Skizze mit Drehungsmatrix $T$ und Verschiebungsvektor $c$. \vskip3pt
+
+\textbf{Welche Punkte sind dem Ursprung am nächsten?} \par
+Falls Koordinatentransformation nur aus Drehung $y = Tx$ bestand, sind die gleichen Punkte dem Ursprung am nächsten wie in der Normalform.
+
+}
+\WhiteSpace
+
+
+% \item Man schreibe die Funktion in folgender Form: $q(x) = x^T A x + a^T\cdot x + b$, wobei $A \in \mathbb{R}^{n\times n}, a \in \mathbb{R}^n, b \in \mathbb{R}$ \par \vskip2pt
+
+%\vskip2pt Bsp: \scalebox{0.8}{$y^T D y + a^T T y + b = -3y_1^2 - 2y_2^2 + 4y_3^2 + 2y_1 - \frac{1}{3}$}

@@ -1,0 +1,36 @@
+\subsection{13.5 Spur}{
+\vskip1pt
+
+Die Spur einer quadratischen $n \times n$ Matrix $A$ bezeichnet die Summe ihrer Hauptdiagonalelemente.\par\vskip2pt
+
+\begin{center}
+$A=\begin{pmatrix}
+	a_{11} & a_{12} & \cdots & a_{1n} \\
+	a_{21} & a_{22} & \cdots & a_{2n} \\
+	\vdots & \vdots & \ddots & \vdots \\
+	a_{n1} & a_{n2} & \cdots & a_{nn}
+	\end{pmatrix}$
+\end{center}
+\vspace{-5pt}
+
+ist also\par\vspace{-15pt}
+\begin{center}
+\[Spur(A)=\sum_{j=1}^n a_{jj} = a_{11}+a_{22}+\dotsb+a_{nn}\]
+\end{center}
+\vspace{-5pt}
+
+\textbf{Eigenschaften:}
+\vspace{-3pt}
+
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item $Spur(A) = Spur(A^T)$.
+\item $Spur(\alpha A + \beta B) = \alpha Spur(A) + \beta Spur(B)$.
+\item $Spur(AB) = Spur(BA)$ beides mit $\textstyle\sum_{i,j}a_{ij}b_{ji}$
+\item $Spur(ABC) = Spur(CBA) = Spur(BCA)$
+\item $Spur(B^{-1}AB) = Spur(A)$
+\item Sind $A$ und $B$ $n\times n$ Matrizen, wobei $A$ positiv definit und $B$ nicht negativ ist, so gilt $Spur(AB) \geq 0$.
+\end{itemize}
+
+}
+\colbreak
+%\WhiteSpace

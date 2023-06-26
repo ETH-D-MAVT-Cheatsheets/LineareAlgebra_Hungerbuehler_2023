@@ -1,0 +1,47 @@
+\subsection{8.4 Gram-Schmidtsches Orthonormalisierungsverfahren}{
+\vskip3pt
+
+Ziel des Gram-Schmidtschen Orthonormalisierungsverfahrens ist, aus einer beliebigen Basis eine sogenannte \textbf{Orthonormalbasis} zu erzeugen. 
+\vskip4pt
+
+\colbreak
+Bei einer Orthonormalbasis sind alle Basisvektoren:
+\begin{itemize}[leftmargin=1cm, itemsep=0.5pt]
+\item orthogonal zueinander: $\langle b_i, b_j \rangle = 0$
+\item Einheitsvektoren: $||b_i|| = \sqrt{\langle b_i, b_i \rangle}= 1$
+\end{itemize}
+\vskip5pt
+
+\textbf{Orthonormalisierungsverfahren durchführen:} \par \vskip2pt
+Für die Durchführung benötigt man eine beliebige Basis, sowie ein beliebiges Skalarprodukt (meistens gegeben).
+\vspace{-2pt}
+\begin{center}
+\begin{minipage}[t]{0.98 \columnwidth}
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+
+\item Wähle beliebigen ersten Basisvektor $b_1$ und normiere mit von Skalarprodukt induzierter Norm. \par \vskip2pt
+\hskip15pt $e_1 = \frac{b_1}{||b_1||} = \frac{b_1}{\sqrt{\langle b_1, b_1 \rangle}}$
+
+\item Wähle zweiten Basisvektor $b_2$. Zuerst zu $b_1$ parallelen Teil abziehen, und dann normieren. \par \vskip2pt
+\hskip15pt $e_2' = b_2 - \langle b_2, e_1 \rangle \cdot e_1$ \par
+\hskip15pt $e_2 = \frac{e_2'}{||e_2'||} = \frac{e_2'}{\sqrt{\langle e_2', e_2' \rangle}}$
+
+\item Wiederhole für jeden weiteren Basisvektor $b_i$: \par \vskip2pt
+\hskip15pt $e_i' = b_i - \langle b_i, e_1 \rangle \cdot e_1 - \langle b_i, e_2 \rangle \cdot e_2$ \par
+\hskip33pt $-\hdots - \langle b_i, e_{i-1} \rangle \cdot e_{i-1}$ \par
+\hskip15pt $e_i = \frac{e_i'}{||e_i'||} = \frac{e_i'}{\sqrt{\langle e_i', e_i' \rangle}}$
+\end{enumerate}
+\end{minipage}
+\end{center}
+
+
+% \vskip4pt
+% \textbf{Beispiele für Skalarprodukte}
+% \begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+% \item Standardskalarprodukt auf $\mathbb{R}^n$: $\langle x, y \rangle = x^T \cdot y$
+% \item Funktionenskalarprodukt: $\langle f, g \rangle = \int_{a}^{b}f(x) g(x) dx$
+% \end{itemize}
+
+
+}
+\WhiteSpace

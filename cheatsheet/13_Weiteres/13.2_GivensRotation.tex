@@ -1,0 +1,48 @@
+\subsection{13.2 Givens-Rotation}{
+\vskip1pt
+
+Die Givens-Rotation ermöglicht eine Rotation um eine fixe Achse in $\mathbb{R}^3$ mit Orthonormalbasis.\par
+
+\begin{center}
+$U_x(\phi) := \begin{pmatrix}
+				      1       &       0       &      0       \\
+			          0       &  \cos(\alpha) & -\sin(\alpha)\\
+				      0       & \sin(\alpha)  &  \cos(\alpha) 
+			  \end{pmatrix}$\vskip3pt\par
+$U_y(\phi) := \begin{pmatrix}
+			     \cos(\alpha) &       0       &  \sin(\alpha) \\
+				       0      &       1       &      0        \\
+				-\sin(\alpha) &       0       &  \cos(\alpha)
+			  \end{pmatrix}$\vskip3pt\par
+$U_z(\phi) := \begin{pmatrix}
+			     \cos(\alpha) & -\sin(\alpha) &      0       \\
+				 \sin(\alpha) &  \cos(\alpha) &      0       \\
+				      0       &       0       &      1
+			  \end{pmatrix}$\par	  
+\end{center}
+
+\textbf{Charakteristisches Polynom}\par\vskip1pt
+Sie besitzt das charakteristische Polynom
+\begin{center}
+$(1 - \lambda)(\lambda^2 -2\lambda cos(\alpha) + 1) = 0$
+\end{center}
+\vskip3pt
+
+\textbf{Eigenwerte}\par\vskip2pt
+Und die Eignewerte ergeben sich wie folgt
+
+\vspace{-7pt}
+\begin{align*}
+\lambda_1 &= 1 \\
+\lambda_2 &= cos(\alpha) + isin(\alpha) \\
+\lambda_3 &= cos(\alpha) - isin(\alpha)
+\end{align*}
+\vspace{-7pt}
+
+Dabei ergeben sich die Eigenvektoren zu
+\begin{center}
+$v_1 = \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}, \qquad v_2 = \begin{pmatrix} 0\\ i\\ 0\end{pmatrix}, \qquad v_3 = \begin{pmatrix} 0\\ -i\\ 0\end{pmatrix}$
+\end{center}
+
+}
+\WhiteSpace

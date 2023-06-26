@@ -1,0 +1,28 @@
+\subsection{1.2 Homogenes Lineares Gleichungssystem}{
+
+\renewcommand{\arraystretch}{1.1}
+\begin{center}
+  \begin{tabular}{C{3mm}  C{3mm}  C{3mm} C{3.5mm} | C{3mm}}
+  $x_1$ &$x_2$ & $\dotsm$ & $x_n$ & 1 \\ \hline
+  $a_{11}$ & $a_{12}$ & $\dotsm$ & $a_{1n}$ & \hskip2.2pt 0 \tikzmark[xshift=5pt,yshift=1ex]{vh} \\
+  $a_{21}$ & $a_{22}$ & $\dotsm$ & $a_{2n}$ & 0 \\
+  $\vdots$ & $\vdots$ &  & $\vdots$ & $\vdots$ \\
+  $a_{m1}$ & $a_{m2}$ & $\dotsm$ & $a_{mn}$ & \hskip2.2pt 0 \tikzmark[xshift=5pt,yshift=-1ex]{wh} \\
+  \end{tabular}
+ \end{center}
+
+\drawbrace[brace, thick, brown!80!black]{vh}{wh}
+\annote[above=6.5mm, right= 9pt, brown!80!black, rotate=-90]{brace-4}{\small Nullvektor}
+
+\vspace{-1mm}
+
+\begin{itemize}[leftmargin=0.29cm, itemsep=1pt]
+
+\item Hat immer die triviale Lösung $x = 0$
+\item Hat ausschliesslich die triviale Lösung, wenn Rang vollständig ($r = n$, $det(A) \neq 0$)
+\item Hat zusätzlich nichttriviale Lösungen, wenn Rang nicht vollständig ($r < n$, $det(A) = 0$)
+
+\end{itemize}
+
+}
+

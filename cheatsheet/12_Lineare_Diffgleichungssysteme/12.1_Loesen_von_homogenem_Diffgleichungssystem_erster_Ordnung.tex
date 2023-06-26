@@ -1,0 +1,41 @@
+\subsection{12.1 Lösen von homogenem Diff'gleichungssystem}{
+\vskip1pt
+
+Man sucht eine Lösung für ein System von Differentialgleichungen, gegeben in folgender Form: \vskip5pt
+
+\begin{center}
+$\begin{pmatrix} y_1'(t) \\ y_2'(t) \\ y_3'(t) \end{pmatrix} = \begin{pmatrix}a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22}  & a_{23}\\ a_{31} & a_{32} & a_{33} \end{pmatrix} \cdot \begin{pmatrix} y_1(t) \\ y_2(t) \\ y_3(t) \end{pmatrix}, \hskip5pt \begin{pmatrix} y_1(0) \\ y_2(0) \\ y_3(0) \end{pmatrix}$
+\end{center}
+
+Die Anfangsbedingungen $y(0)$ sowie die Matrix A sei bekannt, gesucht ist $y(t)$. \par
+Das Problem kann durch Transformation in Eigenbasis (Entkopplung) gelöst werden. \par
+\vskip6pt
+
+\begin{minipage}[t]{0.15 \columnwidth}
+Bsp:
+\end{minipage}
+\begin{minipage}[t]{0.84 \columnwidth}
+$\begin{pmatrix} y_1'(t) \\ y_2'(t) \end{pmatrix} = \begin{pmatrix}3 & 2 \\ 1 & 4 \end{pmatrix} \cdot \begin{pmatrix} y_1(t) \\ y_2(t)\end{pmatrix}, \hskip5pt \begin{pmatrix} y_1(0) \\ y_2(0) \end{pmatrix} = \begin{pmatrix} 3 \\ 6 \end{pmatrix}$
+\end{minipage}
+
+\vskip6pt
+
+\textbf{Vorgehen:} (Transformation in Eigenbasis $z = T^{-1}\cdot y$) \vskip1pt
+
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Man diagonalisiere die Matrix $A = TDT^{-1}$ (siehe 6.6) und bestimme die Transformationsmatrix $T$.
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt$D = \begin{pmatrix}2 & 0 \\ 0 & 5 \end{pmatrix}, \hskip3pt T = \begin{pmatrix}-2 & 1 \\ 1 & 1 \end{pmatrix}$} \par
+
+\item Sei $t^{(i)}$ die i-te Spalte von $T$ und $d_{ii}$ der i-te Diagonaleintrag von $D$. \par Die Lösung des Diff'gleichungssystems lautet dann:\par $y(t) = z_1(0)\cdot t^{(1)}\cdot e^{d_{11} t} + z_2(0)\cdot t^{(2)}\cdot e^{d_{22} t} + \hdots$
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt $\begin{pmatrix} y_1(t) \\ y_2(t) \end{pmatrix} = z_1(0)\cdot \begin{pmatrix} -2 \\ 1 \end{pmatrix} \cdot e^{2t} + z_2(0)\cdot \begin{pmatrix} 1 \\ 1 \end{pmatrix} \cdot e^{5t}$} \par
+
+\item Variante 1: Bestimme $T^{-1}$, danach $z(0) = T^{-1}\cdot y(0)$. \par
+Variante 2: Bestimme $z(0)$ durch Lösen des Gleichungssystems $T\cdot z(0) = y(0)$. \par
+Falls keine Anfangsbedingungen gegeben, $z_i(0) = C_i$.
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt$\begin{pmatrix}-1/3 & 1/3 \\ 1/3 & 2/3 \end{pmatrix} \cdot \begin{pmatrix} 3 \\ 6 \end{pmatrix} = \begin{pmatrix} 1 \\ 5 \end{pmatrix} = \begin{pmatrix} z_1(0) \\ z_2(0) \end{pmatrix}$} \par
+
+\end{enumerate}
+\vspace{-2pt}
+
+}
+\WhiteSpace

@@ -1,0 +1,40 @@
+\subsection{13.3 Blockmatrix}{
+\vskip1pt
+
+Eine Blockmatrix ist eine Matrix welche in mehrere \grqq{}Blöcke\grqq{} unterteilt werden kann.\par
+
+Beispiel einer $2 \times 2$ Blockmatrix:
+\begin{center}
+$P = \begin{bmatrix}
+			\pmb A & \pmb B \\
+			\pmb C & \pmb D
+	 \end{bmatrix}$
+\end{center}
+
+\textbf{Determinante}\par\vskip1pt
+Für die Determinante einer $2 \times 2$ Blockmatrix mit einem 0 Block gilt die Eigenschaft\par\vspace{-4pt}
+\begin{center}
+$det\begin{pmatrix} \pmb A & 0\\	\pmb C & \pmb D\end{pmatrix} = det(\pmb A)det(\pmb B)$
+\end{center}\par\vskip3pt
+
+Handelt es sich bei den Blöcken um quadratische Matrizen der gleichen Größe, welche kommutieren ($CD = DC$) dann gilt des Weiteren\par\vspace{-4pt}
+\begin{center}
+$det\begin{pmatrix} \pmb A & \pmb B\\ \pmb C & \pmb D\end{pmatrix} = det(\pmb{AD} - \pmb{BC})$
+\end{center}\par\vskip3pt
+
+Und falls $A=D$ und $B=C$ gilt\par\vspace{-4pt}
+\begin{center}
+$det\begin{pmatrix} \pmb A & \pmb B\\ \pmb B & \pmb A\end{pmatrix} = det(\pmb A - \pmb B)det(\pmb A + \pmb B)$
+\end{center}\par\vskip3pt
+
+
+\textbf{Eigenwerte}\par\vskip1pt
+Die Eigenwerte einer $2 \times 2$ Blockmatrix $P$ mit einem 0 Block ergeben sich aus\par\vspace{-4pt}
+\begin{center}
+$det\begin{pmatrix} \pmb A - \lambda\pmb I & 0\\ \pmb C & \pmb D - \lambda\pmb I\end{pmatrix} = det(\pmb A - \lambda\pmb I)det(\pmb D - \lambda\pmb I)$
+\end{center}\par\vskip3pt
+
+Deshalb gilt $eig(P) = (eig(A), eig(D))$
+
+}
+\WhiteSpace
