@@ -1,0 +1,63 @@
+\subsection{4.1 Definition Vektorraum}{
+\vskip1pt
+Sei V eine Menge von Objekten. V heisst Vektorraum, wenn eine \textbf{innere Operation} (Kombination von zwei Objekten) und eine \textbf{äussere Operation} (Kombination eines Objekts mit einem Skalar) definiert sind, und folgende Axiome gelten:
+
+\vskip3pt
+\hskip6pt
+\begin{minipage}[c]{0.35 \columnwidth}
+\textbf{Innere Operation:}
+\vskip1pt
+$\bigoplus$: \hskip2pt $V \times V \rightarrow V$ \par
+\hskip15pt $(a, b) \mapsto a \bigoplus b$
+\end{minipage}
+\hskip30pt
+\begin{minipage}[c]{0.35 \columnwidth}
+\textbf{Äussere Operation:}
+\vskip1pt
+$\bigodot$: \hskip2pt $\mathbb{K} \times V \rightarrow V$ \par
+\hskip15pt $(\alpha, a) \mapsto \alpha \bigodot a$
+\end{minipage}
+
+\vskip3pt
+\hskip6pt
+\textbf{Axiome:} \vskip2pt \par
+\hskip6pt
+\begin{minipage}[t]{0.36 \columnwidth}
+\parskip8pt
+(A1) $\forall u, v \in V:$ \par
+(A2) $\forall u, v, w \in V:$ \par
+(A3) $\exists 0 \in V,$ \par \vspace{-4pt}
+\hskip17pt $\forall u \in V:$ \par
+(A4) $\forall u \in V,$ \par \vspace{-4pt}
+\hskip17pt $\exists -u \in V:$
+\end{minipage}
+\begin{minipage}[t]{0.6 \columnwidth}
+\parskip8pt
+$u \bigoplus v = v \bigoplus u$ \par
+$(u \bigoplus v) \bigoplus w = u \bigoplus (v \bigoplus w)$ \par
+$u \bigoplus 0 = u$ \par \vskip12pt
+$u \bigoplus (-u) = 0$
+\end{minipage}
+
+\vskip12pt
+\hskip6pt
+\begin{minipage}[t]{0.36 \columnwidth}
+\parskip8pt
+(M1) $\forall \alpha, \beta \in \mathbb{R},$ \par \vspace{-4pt}
+\hskip17pt $\forall u \in V:$ \par
+(M2) $\forall \alpha, \beta \in \mathbb{R},$ \par \vspace{-4pt}
+\hskip17pt $\forall u, v \in V:$ \par
+(M3) $\forall u \in V:$
+\end{minipage}
+\begin{minipage}[t]{0.6 \columnwidth}
+\parskip8pt
+$(\alpha \cdot \beta) \bigodot u = \alpha \bigodot (\beta \bigodot u)$ \par \vskip12pt
+$(\alpha + \beta) \bigodot u = (\alpha \bigodot u) \bigoplus (\beta \bigodot u)$ \par \vskip-4pt
+$\alpha \bigodot (u \bigoplus v) = (\alpha \bigodot u) \bigoplus (\alpha \bigodot v)$
+\vskip0pt
+$1 \bigodot u = u$
+
+\end{minipage}
+
+}
+\WhiteSpace

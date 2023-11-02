@@ -1,0 +1,58 @@
+\subsection{2.8 LR-Zerlegung}{
+
+\vspace{2pt}
+\begin{center}
+\fbox{$A = L \cdot R$}
+\end{center}
+\vspace{6pt}
+
+Mit der LR-Zerlegung kann man eine quadratische Matrix $A$ in das Produkt einer Linksdreiecksmatrix $L$ sowie einer Rechtsdreiecksmatrix $R$ zerlegen. Dies ermöglicht ein effizienteres Lösen von $Ax = b_i$ mit vielen verschiedenen $b_i$.
+
+\vspace{3pt}
+\begin{center} \scalebox{0.9}{Bsp: Löse $Ax = b$ durch LR-Zerlegung von $A = \begin{pmatrix} 2 & 5 \\ 4 & 12 \end{pmatrix}$} \end{center}
+\vspace{0pt}
+
+\textbf{Vorgehen:}
+\vskip2pt
+
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Bringe A durch Zeilensubtraktion in Dreiecksform. Bei erzeugten Nullstellen speichert man, das Wievielfache einer anderen Zeile von dieser Zeile subtrahiert wurde. 
+\vskip6pt Bsp: \scalebox{0.8}{\hskip8pt$\begin{pmatrix} 2 & 5 \\ 4 & 12 \end{pmatrix}  \hskip3pt \Longrightarrow \hskip3pt$} \scalebox{0.7}{$\begin{pmatrix} 2 & 5 \\ \boxed{2} & 2 \end{pmatrix}$} \par
+\scalebox{0.7}{\hskip35pt $\boxed{2}$: Von dieser Zeile wurde das 2-fache einer anderen subtrahiert.}
+
+\item Bestimme $L$ und $R$. $L$ besteht aus den markierten Einträgen und 1 auf der Diagonale, $R$ aus den nichtmarkierten Einträgen.
+\vskip6pt Bsp: \scalebox{0.7}{\hskip8pt$\begin{pmatrix} \textcolor{Maroon}{2} & \textcolor{Maroon}{5} \\ \textcolor{OliveGreen}{\boxed{2}} & \textcolor{Maroon}{2} \end{pmatrix}$} \scalebox{0.8}{$\Longrightarrow \hskip2pt \textcolor{OliveGreen}{L = \begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}}, \hskip3pt \textcolor{Maroon}{R = \begin{pmatrix} 2 & 5 \\ 0 & 2 \end{pmatrix}}$}\par
+
+\item Löse $Ly = b$ (einfach, da $L$ eine Dreiecksmatrix).
+\item Löse $Rx = y$ (einfach, da $R$ eine Dreiecksmatrix).
+\end{enumerate}
+\vskip5pt
+
+\textbf{LRP-Zerlegung mit Permutationsmatrix P}
+
+\vspace{5pt}
+\begin{center}
+\fbox{$P \cdot A = L \cdot R$}
+\end{center}
+\vspace{2pt}
+
+Manchmal ist es notwendig, dass man bei \circled{1} zusätzlich Zeilen vertauschen kann. Dies wird durch eine Permutationsmatrix $P$ möglich. \par
+Hierzu schreibe man zu Beginn die Identitätsmatrix neben $A$, und macht mit dieser alle Zeilenvertauschungen mit:
+
+\vspace{3pt}
+\begin{center} \scalebox{0.9}{Bsp: \hskip6pt
+$\begin{pmatrix}
+1 & 0  & \multicolumn{0}{|c}{1} & 2 \\
+0 & 1  & \multicolumn{1}{|c}{3} & 4 \\
+\end{pmatrix}
+\Longrightarrow
+\begin{pmatrix}
+0 & 1  & \multicolumn{0}{|c}{3} & 4 \\
+1 & 0  & \multicolumn{1}{|c}{1} & 2 \\
+\end{pmatrix}
+$} \end{center}
+\vspace{3pt}
+
+Auf der linken Seite steht am Ende die Permutationsmatrix $P$. $L$ und $R$ werden auf die gleiche Weise wie üblich bestimmt. Bei \circled{3} löse man nun $Ly = Pb$, bei \circled{4} weiterhin $Rx = y$. \par
+}
+\newpage

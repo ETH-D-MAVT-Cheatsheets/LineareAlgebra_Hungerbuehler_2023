@@ -1,0 +1,58 @@
+\subsection{11.2 QR-Zerlegung}{
+\vskip1pt
+
+Mit der QR-Zerlegung kann eine beliebige Matrix $A \in \mathbb{R}^{m \times n}$ in das Produkt einer orthogonalen Matrix $Q \in \mathbb{R}^{n \times n}$ und einer oberen Rechtsdreiecksmatrix $R \in \mathbb{R}^{m \times n}$ verwandelt werden:\vskip10pt
+
+\begin{center} \fbox{$A = Q \cdot R$} \end{center}
+
+\textbf{Vorgehen:} \vskip1pt
+Wir wollen nacheinander alle Elemente unterhalb der Hauptdiagonalen von $A$ eliminieren.
+
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Man wähle zu eliminierendes Element und benenne es $a_{ij}$.
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt$A = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \textcolor{Maroon}{1} & 1 \end{pmatrix} \Longrightarrow \textcolor{Maroon}{a_{31}}$ soll eliminiert werden} \par
+
+\item Lese $i, j$ ab und notiere $a_{jj}, a_{ij}$
+\vskip2pt Bsp: \scalebox{0.8}{$i = 3, j = 1 \Longrightarrow a_{jj} = 1, a_{ij} = 1$} \vskip3pt
+
+\item Berechne $w = \sqrt{a_{jj}^2 + a_{ij}^2}$
+\vskip2pt Bsp: \scalebox{0.8}{$w = \sqrt{1^2 + 1^2} = \sqrt{2}$} \vskip3pt
+
+\item Man finde die richtige Rotationsmatrix $Q'^T$. Man nehme zuerst die Identitätsmatrix $I \in \mathbb{R}^{m\times m}$ und setze $i_{ii} = \cos(\alpha)$, $i_{i j} = -\sin(\alpha)$, $i_{j i} = \sin(\alpha)$, $i_{jj} = \cos(\alpha)$. \par 
+\vskip2pt Bsp: \scalebox{0.8}{$I = \begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0  \\ 0 & 0 & 1\end{pmatrix} \Rightarrow Q'^T = \begin{pmatrix}\cos(\alpha) & 0 & \sin(\alpha) \\ 0 & 1 & 0  \\ -\sin(\alpha) & 0 & \cos(\alpha)\end{pmatrix}$} \vskip3pt
+
+\item Setze in Rotationsmatrix $\sin(\alpha) = \frac{a_{ij}}{w}$ und $\cos(\alpha) = \frac{a_{jj}}{w}$ \par
+\vskip2pt Bsp: \scalebox{0.8}{$Q'^T = \begin{pmatrix}1/\sqrt{2} & 0 & 1/\sqrt{2} \\ 0 & 1 &  0 \\ -1/\sqrt{2} & 0 & 1/\sqrt{2}\end{pmatrix}$} \vskip3pt
+
+\item Berechne $Q'^T\cdot A = A'$\par
+\vskip2pt Bsp: \scalebox{0.8}{$\begin{pmatrix}1/\sqrt{2} & 0 & 1/\sqrt{2} \\ 0 & 1 &  0 \\ -1/\sqrt{2} & 0 & 1/\sqrt{2}\end{pmatrix}\cdot \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{pmatrix} = \begin{pmatrix} \sqrt{2} & 1/\sqrt{2} \\ 0 & 1 \\ 0 & 1/\sqrt{2} \end{pmatrix} $} \vskip3pt
+
+\item Falls $A'$ keine obere Dreiecksmatrix, wiederhole (finde $Q''^T$ etc.) bis alle nötigen Elemente eliminiert.\par
+\vskip2pt Bsp: \scalebox{0.8}{$Q''^T = \begin{pmatrix}1 & 0 & 0 \\ 0 & \sqrt{2}/\sqrt{3} &  1/\sqrt{3} \\ 0& -1/\sqrt{3} & \sqrt{2}/\sqrt{3}\end{pmatrix}, A'' = \begin{pmatrix} \sqrt{2} & 1/\sqrt{2} \\ 0 & \sqrt{3}/\sqrt{2} \\ 0 & 0 \end{pmatrix}$} \vskip3pt
+
+\item Wenn $A'' = R$ gefunden, berechne $Q = (Q''^T\cdot Q'^T)^T$ \par $\Longrightarrow A = Q\cdot R$
+
+\end{enumerate}
+\vskip5pt
+\textbf{Kleinste Quadrate mit QR-Zerlegung} \par
+Löst man ein Optimierungsproblem mit dem Computer, liefert das in 10.1 beschriebene Verfahren ungenaue Lösungen (da numerisch instabil). Das Lösungsverfahren mittels QR-Zerlegung ist besser. \textbf{In Aufgabe nur machen, wenn explizit verlangt!} \vskip5pt
+
+\textbf{Vorgehen:}\vskip3pt
+
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Man bestimme $A$ und $c$ wie bei 10.1.
+\vskip2pt Bsp: \scalebox{0.8}{\hskip8pt$A = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{pmatrix}, \hskip5pt c = \begin{pmatrix} 1 \\  0 \\ 1 \end{pmatrix}$} \par
+
+\item Man führe die QR-Zerlegung durch $A = Q R$
+\vskip2pt Bsp: \scalebox{0.8}{$Q = \begin{pmatrix}1/\sqrt{2} & 1/\sqrt{6} & 1/\sqrt{3} \\ 0 & \sqrt{2}/\sqrt{3} &  -1/\sqrt{3} \\ -1/\sqrt{2} & 1/\sqrt{6} & 1/\sqrt{3}\end{pmatrix}, R = \begin{pmatrix} \sqrt{2} & 1/\sqrt{2} \\ 0 & \sqrt{3}/\sqrt{2} \\ 0 & 0 \end{pmatrix}  $} \vskip3pt
+
+\item Man berechne $d = Q^T\cdot c$
+\vskip2pt Bsp: \scalebox{0.8}{$d = Q^T\cdot c = \begin{pmatrix} 0 \\  \sqrt{2}/\sqrt{3} \\ 2/\sqrt{3} \end{pmatrix}$} \vskip3pt
+
+\item Man berechne löse das Gleichungssystem $R_0\cdot x = d_0$, wobei $R_0$ die extrahierte Dreiecksmatrix aus $R$ ist und $d_0$ die dazugehörigen oberen Einträge von $d$
+\vskip2pt Bsp: \scalebox{0.8}{$R_0 = \begin{pmatrix} \sqrt{2} & 1/\sqrt{2} \\ 0 & \sqrt{3}/\sqrt{2} \end{pmatrix}, \hskip3pt d_0 = \begin{pmatrix} 0 \\  \sqrt{2}/\sqrt{3} \end{pmatrix}$} \vskip3pt
+
+\end{enumerate}
+
+}
+%\WhiteSpace

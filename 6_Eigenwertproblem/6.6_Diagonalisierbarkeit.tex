@@ -1,0 +1,29 @@
+\subsection{6.6 Diagonalisierbarkeit}{
+\vskip1pt
+Eine quadratische Matrix A heisst diagonalisierbar, falls eine reguläre Matrix T existiert, sodass $D = T^{-1}AT$ eine Diagonalmatrix ist. 
+\par
+
+\begin{center}
+\fbox{$A$ halbeinfach $\Longleftrightarrow A$ diagonalisierbar}
+\end{center}
+
+\textbf{Matrix diagonalisieren} (Basiswechsel in Eigenbasis)
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Bestimme die Eigenwerte $\lambda_i$ und die Eigenvektoren $v_i$
+\item Die Matrix $D = diag(\lambda_1, \hdots, \lambda_n)$ ist eine Diagonalmatrix mit den Eigenwerten auf der Diagonalen.
+\item Die Matrix $T = (v_1, \hdots, v_n)$ hat die Eigenvektoren als Spalten \textbf{(Gleiche Reihenfolge wie bei D!)}.
+\item Bestimme $T^{-1}$. Falls EV orthonormal $T^{-1} = T^T$
+\end{enumerate}
+
+\vskip3pt
+
+\textbf{Potenzen und Exponentialfunktion} \par \vskip1pt
+Potenzen/Exponentialfunktionen von diagonalisierbaren Matrizen können einfach berechnet werden:
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item $A^k = (TDT^{-1})^k = T\cdot diag(\lambda_1^k, \hdots, \lambda_n^k)\cdot T^{-1}$
+\item $e^A = e^{TDT^{-1}} = T\cdot diag(e^{\lambda_1}, \hdots, e^{\lambda_n})\cdot T^{-1}$
+\end{itemize}
+
+
+}
+\WhiteSpace

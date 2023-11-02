@@ -1,0 +1,49 @@
+\subsection{1.1 Zeilenstufenform}{
+
+Jedes lineare Gleichungssystem kann durch wiederholtes Ausführen folgender drei Rechenoperationen in die sogenannte Zeilenstufenform gebracht werden (Gaussalgorithmus):
+
+\begin{itemize}
+\item Zeilen vertauschen
+\item Ein Vielfaches einer Zeile zu einer anderen addieren
+\item Eine Zeile mit beliebigem Skalar $\neq 0$ multiplizieren
+\end{itemize}
+
+\vskip4mm
+
+\renewcommand{\arraystretch}{1.3}
+\begin{center}
+  \begin{tabular}{C{2mm}  C{2mm}  C{2mm}  C{2mm}  C{2mm}  C{2mm}  C{2mm} | C{2mm}}
+    \tikzmark[xshift=-1pt,yshift=4pt]{t}$x_1$ & $x_2$ & $x_3$ & $\dotsm$ & $x_j$ & $\dotsm$ & $x_n$\tikzmark[xshift=0,yshift=4pt]{u} & 1 \\ \hline
+    \tikzmark[xshift=-8pt,yshift=1ex]{x}$\oasterisk$ & $\asterisk$ & $\asterisk$ & $\dotsm$ & $\asterisk$ & $\dotsm$ & $\asterisk$ & $b_1$\tikzmark[xshift=8pt,yshift=1ex]{v} \\ \cline{1-2}
+    $0$ & $0$ & \multicolumn{1}{|c}{$\oasterisk$} & $\dotsm$ & $\asterisk$ & $\dotsm$ & $\asterisk$ & $b_2$ \\ \cline{3-3}
+    $0$ & $0$ & $0$ & $\dotsm$ & $\asterisk$ & $\dotsm$ & $\asterisk$ & $b_1$ \\
+    $\vdots$ & $\vdots$ & $\vdots$ &  & $\vdots$ & & $\vdots$ & $\vdots$ \\
+    $0$ & $0$ & $0$ & $\dotsm$ & \multicolumn{1}{|c}{$\oasterisk$} & $\dotsm$ & $\asterisk$ & $b_r$\tikzmark[xshift=8pt,yshift=-1ex]{w} \\ \cline{5-7}
+    $0$ & $0$ & $0$ & $\dotsm$ & $0$ & $\dotsm$ & $0$ & $b_{r+1}$ \\
+    $\vdots$ & $\vdots$ & $\vdots$ &  & $\vdots$ & & $\vdots$ & $\vdots$ \\
+    \tikzmark[xshift=-8pt,yshift=-1ex]{y}$0$ & $0$ & $0$ & $\dotsm$ & $0$ & $\dotsm$ & $0$ & $b_m$ \\
+  \end{tabular}
+\end{center}
+
+\drawbrace[brace mirrored, thick, blue!50!black]{x}{y}
+\drawbrace[brace, thick, red!80!black]{v}{w}
+\drawbrace[brace, thick, green!50!black]{t}{u}
+
+\annote[above=13mm, left=9pt,  blue!50!black, rotate=90]{brace-1}{m: Anzahl Gleichungen}
+\annote[above=5mm, right= 9pt, red!80!black, rotate=-90]{brace-2}{r: Rang}
+\annote[above=3pt, green!50!black]{brace-3}{n: Anzahl Unbekannte}
+
+\vspace{-3mm}
+
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{} p{2.4cm} p{4.1cm}}
+\textbf{Keine Lösung:} & $r < m$ und $b_{i} \neq 0 \hskip3pt \forall i > r$ \\
+\textbf{Eindeutige Lösung:} & $r = n = m$ \\
+\textbf{Unendlich Lösungen:} & $r < n$ und $b_{i} = 0 \hskip3pt \forall i > r$ \par Anzahl freie Parameter: $n - r$ \\
+\textbf{Ax = b für beliebiges b lösbar:} & Voller Rang: $r = m$ \par oder \par $m = n$, und  $Ax = 0$ hat nur die triviale Lösung $x = 0$ \\
+\textbf{Ax = b für beliebiges b eindeutig lösbar:} & Voller Rang: $r = m$ und gleich viele Gleichungen wie Unbekannte: $m =n$
+\end{tabular}
+\vspace{-1mm}
+}
+\WhiteSpace

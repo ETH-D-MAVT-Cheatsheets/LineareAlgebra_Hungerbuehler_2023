@@ -1,0 +1,41 @@
+\subsection{8.1 Definition Skalarprodukt}{
+\vskip1pt
+Ein Skalarprodukt ordnet jedem Paar $x$, $y$ von Vektoren eine Zahl $\langle x, y \rangle$ zu. \par
+\vskip5pt
+
+Es muss folgende Bedingungen erfüllen:
+\vspace{-1pt}
+\begin{center}
+\begin{minipage}[t]{0.8 \columnwidth}
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item $\langle x, y + z \rangle = \langle x, y \rangle + \langle x, z \rangle$
+\item $\langle x, \alpha y \rangle = \alpha \langle x, y \rangle$
+\item $\langle x, y \rangle = \langle y, x \rangle$
+\item $\langle x, x \rangle \geq 0$ und $\langle x, x \rangle = 0 \Leftrightarrow x = 0$
+\end{enumerate}
+\end{minipage}
+\end{center}
+
+
+\vskip4pt
+\textbf{Beispiele für Skalarprodukte}
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item Standardskalarprodukt auf $\mathbb{R}^n$: $\langle x, y \rangle = x^T \cdot y$
+\item Funktionenskalarprodukt: $\langle f, g \rangle = \int_{a}^{b}f(x) g(x) dx$
+\end{itemize}
+
+\vskip2pt
+\textbf{Rechenregeln:} \par
+\vspace{-3mm}
+
+\hskip5pt
+\begin{minipage}[t]{\columnwidth}
+\begin{align}
+\langle Ax, Ay \rangle &= \langle x, A^TAy \rangle \nonumber \\
+cos\phi &= \frac{\langle a, b \rangle}{\|a\| \|b\|} \qquad \forall\: a \land b \in \mathbb{R}^2 \nonumber
+\end{align}
+\end{minipage}
+
+
+}
+\WhiteSpace

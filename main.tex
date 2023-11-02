@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Latex Template für Zusammenfassungen
+% Robin Frauenfelder - September 2018
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt, a4paper, landscape, xcolor=dvipsnames]{extarticle}
+
+\input{0_Setup/Setup.tex}
+
+\begin{document}
+
+% Vier Spalten
+\begin{multicols*}{4}
+
+% Info über das Dokument
+\DocumentInfo
+{LinAlg Cheatsheet} %Titel
+{Robin Frauenfelder - robinfr@ethz.ch} %Untertitel
+{Dieses Cheatsheet wurde im Laufe meiner Übungstunde im MAVT Basisjsahr 18/19 erstellt. Die \LaTeX -Templates findet ihr auf der Amiv-Website.} % Beschreibung
+\WhiteSpace
+
+% Dokumentinhalt
+\section{1. Lineare Gleichungssysteme}
+\WhiteSpace
+	\input{1_Lineare_Gleichungssysteme/1.1_Zeilenstufenform}
+	\input{1_Lineare_Gleichungssysteme/1.2_Homogenes_Lineares_Gleichungssytem}
+	
+\section{2. Matrizen}
+\WhiteSpace
+	\input{2_Matrizen/2.1_Matrixschreibweise}
+	\input{2_Matrizen/2.2_Matrixmultiplikation}
+	\input{2_Matrizen/2.3_Identitaetsmatrix}
+	\input{2_Matrizen/2.4_Diagonal-_und_Dreiecksmatrizen}
+	\input{2_Matrizen/2.5_Transponierte}
+	\input{2_Matrizen/2.6_Inverse}
+	\input{2_Matrizen/2.7_Orthogonale_Matrizen}
+	\input{2_Matrizen/2.8_LR-Zerlegung}
+	\input{2_Matrizen/2.9_Symmetrische_Matrizen}
+	
+\section{3. Determinante}
+\WhiteSpace
+	\input{3_Determinante/3.1_Definition_Determinante}
+	\input{3_Determinante/3.2_Rechenregeln_Determinante}
+	\input{3_Determinante/3.3_Berechnungsmethoden_Determinante}
+	\input{3_Determinante/3.4_Wichtige_Zusammenhaenge}
+	
+\section{4. Vektorräume}
+\WhiteSpace
+	\input{4_Vektorraeume/4.1_Definition_Vektorraum}
+	\input{4_Vektorraeume/4.2_Definition_Unterraum}
+	\input{4_Vektorraeume/4.3_Linearkombination}
+	\input{4_Vektorraeume/4.4_Lineare_Unabhaengigkeit}
+	\input{4_Vektorraeume/4.5_Span_Erzeugendensystem_und_Basis}
+	\input{4_Vektorraeume/4.6_Basiswechsel}
+	\input{4_Vektorraeume/4.7_Koordinaten}
+	
+\section{5. Lineare Abbildungen}
+\WhiteSpace
+	\input{5_Lineare_Abbildungen/5.1_Definition_Lineare_Abbildung}
+	\input{5_Lineare_Abbildungen/5.2_Kern_und_Bild_einer_Matrix}
+	\input{5_Lineare_Abbildungen/5.3_Abbildungsmatrix_von_gegebener_Abbildung_bestimmen}
+	
+\section{6. Eigenwertproblem}
+\WhiteSpace
+	\input{6_Eigenwertproblem/6.1_Definition_Eigenwerte_und_Eigenvektoren}
+	\input{6_Eigenwertproblem/6.2_Eigewerte_bestimmen}
+	\input{6_Eigenwertproblem/6.3_Eigenvektoren_bestimmen}
+	\input{6_Eigenwertproblem/6.4_Algebraische_und_geometrische_Vielfachheit}
+	\input{6_Eigenwertproblem/6.5_Halbeinfache_Matrizen_und_Eigenbasis}
+	\input{6_Eigenwertproblem/6.6_Diagonalisierbarkeit}
+	\input{6_Eigenwertproblem/6.7_Aehnlichkeit}
+
+\section{7. Normen}
+\WhiteSpace
+	\input{7_Normen/7.1_Definition_Vektornorm}
+	\input{7_Normen/7.2_Lp-Normen_im_Rn}
+	\input{7_Normen/7.3_Lp-Normen_fuer_Funktionen}
+	\input{7_Normen/7.4_Matrixoperatornormen}
+	
+\section{8. Skalarprodukt}
+\WhiteSpace
+	\input{8_Skalarprodukt/8.1_Definition_Skalarprodukt}
+	\input{8_Skalarprodukt/8.2_Von_Skalarprodukt_induzierte_Norm}
+	\input{8_Skalarprodukt/8.3_Orthogonalitaet_und_Orthogonalprojektion}
+	\input{8_Skalarprodukt/8.4_Gram-Schmidtsches-Orthonormalisierungsverfahren}
+	
+\section{9. Kreuzprodukt}
+\WhiteSpace
+	\input{9_Kreuzprodukt/9.1_Definition_Kreuzprodukt}
+	\input{9_Kreuzprodukt/9.2_Identitaeten}
+	\input{9_Kreuzprodukt/9.3_Spatprodukt}
+	
+\section{10. Quadratische Formen}
+\WhiteSpace
+	\input{10_Quadratische_Formen/10.1_Definition_Quadratische_Form}
+	\input{10_Quadratische_Formen/10.2_Definitheit_einer_quadratischen_Form}
+	\input{10_Quadratische_Formen/10.3_Definitheit_einer_symmetrischen_Matrix}
+	\input{10_Quadratische_Formen/10.4_Extrema_einer_quadratischen_Form}
+	\input{10_Quadratische_Formen/10.5_Traegheitssatz_von_Sylvester}
+	\input{10_Quadratische_Formen/10.6_Quadriken}
+	\input{10_Quadratische_Formen/10.7_Hauptachsentransformation_einer_quadratischen_Form}
+	\input{10_Quadratische_Formen/10.8_Formen_von_Quadriken}
+
+\colbreak
+
+\section{11. Kleinste Quadrate}
+\WhiteSpace
+	\input{11_Kleinste_Quadrate/11.1_Kleinste_Quadrate}
+	\input{11_Kleinste_Quadrate/11.2_QR-Zerlegung}
+
+\newpage
+
+\section{12. Lineare Diff'gleichungssysteme}
+\WhiteSpace
+	\input{12_Lineare_Diffgleichungssysteme/12.1_Loesen_von_homogenem_Diffgleichungssystem_erster_Ordnung}
+	\input{12_Lineare_Diffgleichungssysteme/12.2_Umwandlung_hoehere_Ordnung_in_System_1._Ordnung}
+	\input{12_Lineare_Diffgleichungssysteme/12.3_Loesen_von_inhomogenem_Diffgleichungssystem}
+	\input{12_Lineare_Diffgleichungssysteme/12.4_Bedingungen_im_Unendlichen}
+
+\colbreak
+
+\section{13. Weiteres}
+\WhiteSpace
+	\input{13_Weiteres/13.1_Winkeltabelle}
+	\input{13_Weiteres/13.2_GivensRotation}
+	\input{13_Weiteres/13.3_Blockmatrix}
+	\input{13_Weiteres/13.4_Matrixexponentialfunktion}
+	\input{13_Weiteres/13.5_Spur}
+	
+\section{14. Persönliche Ergänzungen}
+\WhiteSpace
+	\input{14_Ergaenzungen/14.1_LoesungenLGS.tex}
+
+\colbreak
+\mbox{}
+	
+\end{multicols*} 
+
+\end{document}

@@ -1,0 +1,40 @@
+\subsection{10.3 Definitheit einer symmetrischen Matrix}{
+\vskip1pt
+
+\textbf{Variante 1: Bestimmung der Eigenwerte} \vskip1pt
+Die erste Möglichkeit ist, die Definitheit durch die Eigenwerte zu bestimmen. Eine symmetrische Matrix heisst:
+
+\vspace{-4pt}
+\begin{center}
+\begin{minipage}[c]{0.65 \columnwidth}
+\begin{itemize}[leftmargin=0.29cm, itemsep=0pt]
+\item positiv definit: \hskip27pt Alle $\lambda > 0$
+\item negativ definit: \hskip25pt Alle $\lambda < 0$
+\item positiv semidefinit: \hskip13pt Alle $\lambda \geq 0$
+\item negativ semidefinit: \hskip11pt Alle $\lambda \leq 0$
+\item indefinit: \hskip45pt sonst
+\end{itemize}
+\end{minipage}
+\end{center}
+\vskip3pt
+
+\null
+\columnbreak
+\textbf{Variante 2: Hurwitz-Kriterium} \vskip1pt
+Die zweite Möglichkeit ist, die Definitheit durch Bestimmung von Unterdeterimanten zu bestimmen: \vskip8pt
+\scalebox{0.8}{$A = \begin{pmatrix}
+\textcolor{Maroon}{a} & \textcolor{OliveGreen}{b} & \textcolor{NavyBlue}{c} \\
+\textcolor{OliveGreen}{d} & \textcolor{OliveGreen}{e} & \textcolor{NavyBlue}{f} \\
+\textcolor{NavyBlue}{g} & \textcolor{NavyBlue}{h} & \textcolor{NavyBlue}{i} \\
+\end{pmatrix} 
+\Longrightarrow \textcolor{Maroon}{A_1 = (a)}, \hskip2pt
+\textcolor{OliveGreen}{A_2 = \begin{pmatrix} a & b \\ d & e\end{pmatrix}}, \hskip2pt
+\textcolor{NavyBlue}{A_3 = \begin{pmatrix} a & b & c \\ d & e & f \\ g & e & h \end{pmatrix}} $}
+
+\begin{itemize}[leftmargin=0.29cm, itemsep=0pt]
+\item positiv definit: \hskip12pt Alle $det(A_i) > 0$ für $i = 1, \hdots, n$
+\item negativ definit: \hskip10pt Alle $det(A_i) < 0$ für $i = 1, 3, 5, \hdots$ \par \hskip59pt Alle $det(A_i) > 0$ für $i = 2, 4, 6, \hdots$
+\end{itemize}
+
+}
+\WhiteSpace

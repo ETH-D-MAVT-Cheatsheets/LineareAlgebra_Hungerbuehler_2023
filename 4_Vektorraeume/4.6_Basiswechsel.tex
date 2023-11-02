@@ -1,0 +1,25 @@
+\subsection{4.6 Basiswechsel}{
+\vskip1pt
+
+Sei $V^n$ ein Vektorraum mit Basen $Q = \{q_1, q_2, \hdots, q_n\}$ und $W = \{w_1, w_2, \hdots, w_n\}$. Sei $v$ ein Vektor $\in V$.
+\par
+\vskip8pt
+
+\textbf{Basiswechsel von $[v]_q$ nach $[v]_w$ durchführen:}
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Übergangsmatrix: $T_{q \rightarrow w} = ([q_1]_w, \hdots, [q_n]_w)$
+\item $[v]_w = T_{q \rightarrow w}\cdot[v]_q$
+\end{enumerate}
+\vskip6pt
+
+\textbf{Tipps:}
+\begin{itemize}[leftmargin=0.29cm, itemsep=0.5pt]
+\item $T_{w \rightarrow q} = T_{q \rightarrow w}^{-1}$
+\item Meist ist eine der beiden Basen die Standardbasis $S$. Die Übergangsmatrix $T_{q \rightarrow s}$ ist dann sehr einfach bestimmbar. Die entegengesetzte Übergangsmatrix wird am schnellsten durch invertieren gefunden.
+\item Basiswechsel für Matrizen: \par $[A]_w = T_{q \rightarrow w}\cdot [A]_q \cdot T_{q \rightarrow w}^{-1}$
+\item Falls $T$ orthogonal: $T^{-1} = T^T$
+\end{itemize}
+
+\vspace{-3pt}
+}
+\WhiteSpace
